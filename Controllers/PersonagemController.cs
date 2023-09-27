@@ -1,8 +1,13 @@
-﻿using NarutoUnicarioca.Models;
+﻿using NarutoUnicarioca.Helpers;
+using NarutoUnicarioca.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -20,13 +25,26 @@ namespace NarutoUnicarioca.Controllers
         [HttpPost]
         public JsonResult GetPersonagens()
         {
-            var personagens = new List<Personagem>
+            var httpclient = new HttpClient();
+            var url = "https://www.narutodb.xyz/api/akatsuki?page=1&limit=44";
+
+            var task = httpclient.GetAsync(url);
+            task.Wait();
+
+            if (task.Result.IsSuccessStatusCode)
             {
-                new Personagem { Id = 1, Name = "Naruto" }
-            };
+                var json = task.Result.Content.ReadAsStringAsync().Result;
+                var personagens = JsonConvert.DeserializeObject<IntegracaoNaruto>(json);
+                return Json(new { personagens.akatsuki }, JsonRequestBehavior.DenyGet);
+            }
+            else
+            {
+                return null;
+            }
 
 
-            return Json(new { personagens }, JsonRequestBehavior.DenyGet);
+
         }
+
     }
 }

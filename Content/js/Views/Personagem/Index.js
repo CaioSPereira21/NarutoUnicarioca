@@ -10,8 +10,8 @@
                 type: "POST",
                 url: "/Personagem/GetPersonagens",
                 success: function (data) {
-                    if (data.personagens.length) {
-                        self.Personagens = data.personagens;
+                    if (data.akatsuki.length) {
+                        self.Personagens = data.akatsuki;
                     }
                 },
                 error: function (error) {
