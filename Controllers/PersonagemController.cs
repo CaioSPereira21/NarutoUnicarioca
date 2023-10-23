@@ -22,6 +22,48 @@ namespace NarutoUnicarioca.Controllers
             return View();
         }
 
+        public async Task<ActionResult> Akatsuki()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var url = "https://www.narutodb.xyz/api/akatsuki?page=1&limit=44";
+                var response = await httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var personagens = JsonConvert.DeserializeObject<IntegracaoNaruto>(json);
+                    ViewBag.Personagens = JsonConvert.SerializeObject(personagens.akatsuki);
+                    return View();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        public async Task<ActionResult> Bijuus()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var url = "https://www.narutodb.xyz/api/tailed-beast?page=1&limit=44";
+                var response = await httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var personagens = JsonConvert.DeserializeObject<IntegracaoNaruto>(json);
+                    ViewBag.Personagens = JsonConvert.SerializeObject(personagens.tailedBeasts);
+                    return View();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+
         [HttpPost]
         public JsonResult GetPersonagens()
         {
@@ -41,9 +83,6 @@ namespace NarutoUnicarioca.Controllers
             {
                 return null;
             }
-
-
-
         }
 
     }

@@ -10,6 +10,7 @@ namespace NarutoUnicarioca.Helpers
     {
         public List<Character> characters { get; set; }
         public List<Character> akatsuki { get; set; }
+        public List<Character> tailedBeasts { get; set; }
         public int currentPage { get; set; }
         public int pageSize { get; set; }
         public int totalCharacters { get; set; }

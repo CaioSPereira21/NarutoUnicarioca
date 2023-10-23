@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Personagens";
+    string personagensJson = ViewBag.Personagens;
+}
+
+<input type="hidden" id="hfPersonagensJson" value="@personagensJson" />
+
+<section class="content-header">
+    <h1>
+        Bijuu's
+    </h1>
+</section>
+
+
+<section id="personagemApp" class="content">
+    <div class="row">
+        <div v-for="personagem in Personagens">
+            <label>{{personagem.name}}</label>
+            <img :src="personagem.images[0]" />
+        </div>
+    </div>
+</section>
+
+<script src="~/Content/js/Views/Personagem/Index.js"></script>
