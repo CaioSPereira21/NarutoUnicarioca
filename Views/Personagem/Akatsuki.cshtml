@@ -15,10 +15,14 @@
 <section id="personagemApp" class="content">
     <div class="row">
         <div v-for="personagem in Personagens">
-            <label>{{personagem.name}}</label>
-            <img :src="personagem.images[0]" />
+            <div v-if="personagem.name == 'Deidara' || personagem.name == 'Hidan'">
+                <label>{{personagem.name}}</label>
+                <img :src="personagem.images[0]" />
+                <label> meu personagem</label>
+            </div>
         </div>
     </div>
 </section>
 
 <script src="~/Content/js/Views/Personagem/Index.js"></script>
+<link href="~/Content/css/style.css" rel="stylesheet" />

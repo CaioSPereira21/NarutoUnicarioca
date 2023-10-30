@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="~/Content/js/vue.js"></script>
     <script src="~/Scripts/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.getScript("~/Content/js/Views/Home/Index.js");
+        });
+    </script>
+    <script src="~/Content/js/Views/Home/Index.js"></script>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/Content/css/Default.css" rel="stylesheet" />
+    <link rel="icon" href="~/Imagens/Icone.png" type="image/x-icon" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("Naruto Unicarioca", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar a navegação" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Página Inicial", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Akatsuki", "Akatsuki", "Personagem", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Bijuu's", "Bijuus", "Personagem", new { area = "" }, new { @class = "nav-link" })</li>
+    <nav>
+        <div class="navbar">
+            <i class='bx bx-menu'></i>
+            <div class="logo">
+                <img src="~/Imagens/Logo Naruto.png" />
+            </div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name">Naruto Unicarioca</span>
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="links">
+                    <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                    <li>
+                        <a>PERSONAGENS</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li>@Html.ActionLink("Akatsuki", "Akatsuki", "Personagem")</li>
+                            <li>@Html.ActionLink("Bijuu's", "Bijuus", "Personagem")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Naruto Unicarioca</p>
-        </footer>
+        <hr /><br />
+        <img src="~/Imagens/Logo Unicarioca.png" width="120" />
     </div>
 
     @Scripts.Render("~/bundles/jquery")
