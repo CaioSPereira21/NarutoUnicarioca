@@ -136,7 +136,8 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\css\Default.css" />
-    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\Home.css" />
+    <Content Include="Content\css\Akatsuki.css" />
     <Content Include="Content\js\Views\Home\Index.js" />
     <Content Include="Content\js\Views\Personagem\Index.js" />
     <Content Include="Content\js\vue.js" />
@@ -178,8 +179,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Personagem\Index.cshtml" />
     <Content Include="Views\Personagem\Akatsuki.cshtml" />

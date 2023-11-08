@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="~/Content/js/vue.js"></script>
     <script src="~/Scripts/jquery-3.7.1.js"></script>
-    <script>
-        $(document).ready(function () {
-            $.getScript("~/Content/js/Views/Home/Index.js");
-        });
-    </script>
-    <script src="~/Content/js/Views/Home/Index.js"></script>
-    <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="~/Content/css/Default.css" rel="stylesheet" />
     <link rel="icon" href="~/Imagens/Icone.png" type="image/x-icon" />
@@ -47,8 +40,6 @@
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr /><br />
-        <img src="~/Imagens/Logo Unicarioca.png" width="120" />
     </div>
 
     @Scripts.Render("~/bundles/jquery")

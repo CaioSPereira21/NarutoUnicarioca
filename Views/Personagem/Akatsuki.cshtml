@@ -3,25 +3,22 @@
     string personagensJson = ViewBag.Personagens;
 }
 
+<input type="hidden" id="hfPersonagensJson" value="@personagensJson" />
 
-    <link rel="stylesheet" href="~/Content/css/style.css">
-    <input type="hidden" id="hfPersonagensJson" value="@personagensJson" />
-
-    <section class="content-header">
-        <h1>
-            Akatsuki
-        </h1>
-    </section>
-
-
-    <section id="personagemApp" class="content">
-        <div class="div-pai">
-            <div v-for="personagem in Personagens" class="persona">
-                <label>{{personagem.name}}</label>
-                <img :src="personagem.images[0]"  />
+<section id="personagemApp">
+    <div class="content" style=" background-image: linear-gradient(to top, #1b1515, #ff0000,#1b1515);">
+        <div v-for="personagem in Personagens" class="card">
+            <div class="content">
+                <div class="details">
+                    <div class="name">{{personagem.name}}</div>
+                </div>
+                <div class="img">
+                    <img :src="personagem.images[0]" />
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script src="~/Content/js/Views/Personagem/Index.js"></script>
-    <link href="~/Content/css/style.css" rel="stylesheet" />
+<script src="~/Content/js/Views/Personagem/Index.js"></script>
+<link href="~/Content/css/Akatsuki.css" rel="stylesheet" />

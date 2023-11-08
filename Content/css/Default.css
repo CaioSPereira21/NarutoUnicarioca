@@ -50,6 +50,10 @@ body {
     min-height: 100vh;
 }
 
+.footer-content {
+    text-align: right; /* Alinhamento do texto no centro */
+}
+
 .logo {
     height: 100%;
     padding: 5px;

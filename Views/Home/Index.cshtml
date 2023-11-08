@@ -2,57 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>
-   <html>
-   <head>
-       <meta name="viewport" content="width=device-width,initial-scale=1">
-       <style>
-           .card {
-               box-shadow: 0 6px 17px 0 rgba(0,0,0,2);
-               transition: 0.3s;
-               width: 30%;
-               border-radius: 15px;
-               
-           }
-
-               .card:hover {
-                   box-shadow: 0 8px 20px 0 rgba(0,0,0,2);
-               }
-
-           img {
-               border-radius: 5px 5px 0 0;
-           }
-
-           .container {
-               padding: 50px 25px;
-               text-align: center;
-           }
-
-       </style>
-   </head>
-   <body>
-   
-    <div class="container">
-        <!-- Primeiro Card  -->
-        <div class="card">
-            <img src="~/Imagens/aktsuki_members.png" alt="Avatar" style="width: 100%" />
-            <div class="container">
-                <h4><b>Akatsuki Members</b></h4>
-              
-
-            </div>
-        </div>
-    <div class="container">
-
-    </div>
-       <!-- Segundo Card -->
-        <div class="card">
-            <img src="~/Imagens/bijuus_jinchuurikis.png" alt="Avatar" style="width: 100%" />
-            <div class="container">
-                <h4><b>Bijuus</b></h4>
-            </div>
+<div class="content">
+    <div class="card" id="akatsuki-card" data-url="@Url.Action("Akatsuki", "Personagem")">
+        <img src="~/Imagens/aktsuki_members.png" alt="Avatar" style="width: 100%" />
+        <div class="Titulo">
+            <h4><b>Organização Akatsuki</b></h4>
         </div>
     </div>
-   </body>    
-   </html>
-</main>
+    <div class="card" id="bijuus-card" data-url="@Url.Action("Bijuus", "Personagem")">
+        <img src="~/Imagens/bijuus_jinchuurikis.png" alt="Avatar" style="width: 100%" />
+        <div class="Titulo">
+            <h4><b>Bijuus</b></h4>
+        </div>
+    </div>
+</div>
+
+<link href="~/Content/css/Home.css" rel="stylesheet" />
+<script src="~/Content/js/Views/Home/Index.js"></script>

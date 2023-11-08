@@ -1,0 +1,26 @@
+﻿.card {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+    width: calc(100%/ 2 - 30px);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.Titulo {
+    padding: 50px 25px;
+    text-align: center;
+}
