@@ -24,8 +24,8 @@
     .card::before {
         content: '';
         position: absolute;
-        width: 200%;
-        height: 200%;
+        width: 260%;
+        height: 260%;
         background: linear-gradient(#1b1515,#ff0000);
         animation: animate 2s linear infinite;
     }
