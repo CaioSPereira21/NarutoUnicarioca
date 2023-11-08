@@ -145,6 +145,7 @@
     <Content Include="Imagens\Akatsuki.png" />
     <Content Include="Imagens\Bijjus.jpg" />
     <Content Include="Imagens\Icone.png" />
+    <Content Include="Imagens\Kurama_jovem.png" />
     <Content Include="Imagens\Logo Naruto.png" />
     <Content Include="Imagens\Logo Unicarioca.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
