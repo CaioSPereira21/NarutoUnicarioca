@@ -143,7 +143,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Imagens\Akatsuki.png" />
+    <Content Include="Imagens\aktsuki_members.png" />
     <Content Include="Imagens\Bijjus.jpg" />
+    <Content Include="Imagens\bijuus_jinchuurikis.png" />
     <Content Include="Imagens\Icone.png" />
     <Content Include="Imagens\Kurama_jovem.png" />
     <Content Include="Imagens\Logo Naruto.png" />
