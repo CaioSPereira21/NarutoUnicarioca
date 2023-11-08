@@ -3,6 +3,7 @@
     string personagensJson = ViewBag.Personagens;
 }
 
+<link rel="stylesheet" href="~/Content/css/bijuu_style.css">
 <input type="hidden" id="hfPersonagensJson" value="@personagensJson" />
 
 <section class="content-header">
@@ -14,7 +15,7 @@
 
 <section id="personagemApp" class="content">
     <div class="row">
-        <div v-for="personagem in Personagens">
+        <div v-for="personagem in Personagens" class="persona">
             <label>{{personagem.name}}</label>
             <img :src="personagem.images[0]" />
         </div>

@@ -135,6 +135,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\bijuu_style.css" />
     <Content Include="Content\css\Default.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\js\Views\Home\Index.js" />
