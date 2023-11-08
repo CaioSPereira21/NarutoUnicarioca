@@ -50,9 +50,8 @@ body {
     min-height: 100vh;
 }
 
-.body-content {
-    padding: 30px;
-    overflow: hidden;
+.footer-content {
+    text-align: right; /* Alinhamento do texto no centro */
 }
 
 .logo {
@@ -105,9 +104,10 @@ nav .navbar .links {
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         list-style: none;
         padding: 0 14px;
+        z-index: 20;
     }
 
         nav .navbar .links li a {
@@ -136,6 +136,7 @@ nav .navbar .links li .arrow {
 }
 
 nav .navbar .links li .sub-menu {
+    width: 100%;
     position: absolute;
     top: 70px;
     left: 0;
@@ -150,11 +151,6 @@ nav .navbar .links li .sub-menu {
 nav .navbar .links li:hover .htmlCss-sub-menu,
 nav .navbar .links li:hover .js-sub-menu {
     display: block;
-}
-
-.navbar .links li .sub-menu li {
-    padding: 0 22px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .navbar .links li .sub-menu a {
@@ -246,6 +242,13 @@ nav .navbar .links li:hover .js-sub-menu {
     padding: 0 15px;
     font-size: 16px;
     border: none;
+}
+
+.menu-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin: 0px 5px;
 }
 
 .navbar .nav-links .sidebar-logo {
