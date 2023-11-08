@@ -107,6 +107,7 @@ nav .navbar .links {
         justify-content: flex-start;
         list-style: none;
         padding: 0 14px;
+        z-index: 20;
     }
 
         nav .navbar .links li a {
