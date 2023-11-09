@@ -1,25 +1,21 @@
 ﻿@{
     ViewBag.Title = "Personagens";
-    string personagensJson = ViewBag.Personagens;
 }
 
-<link rel="stylesheet" href="~/Content/css/bijuu_style.css">
-<input type="hidden" id="hfPersonagensJson" value="@personagensJson" />
-
-<section class="content-header">
-    <h1>
-        Bijuu's
-    </h1>
-</section>
-
-
 <section id="personagemApp" class="content">
-    <div class="row">
-        <div v-for="personagem in Personagens" class="persona">
-            <label>{{personagem.name}}</label>
-            <img :src="personagem.images[0]" />
+    <div class="content">
+        <div v-for="personagem in Personagens" class="card">
+            <div class="content">
+                <div class="details">
+                    <div class="name">{{personagem.name}}</div>
+                </div>
+                <div class="img">
+                    <img :src="personagem.images[0]" />
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<script src="~/Content/js/Views/Personagem/Index.js"></script>
+<link rel="stylesheet" href="~/Content/css/Bijuus.css">
+<script src="~/Content/js/Views/Bijuus/Index.js"></script>
